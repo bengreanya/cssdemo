@@ -31,17 +31,22 @@ header .logo {
 main {
     padding: 20px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 /* Padding, margin, and border CSS */
 .model-container {
+    background-color: rgb(250, 244, 177);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     border: solid black 1px;
 }
-
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .box-model {
     color: white;
     font-size: 2em;
@@ -51,7 +56,7 @@ main {
     margin: 10px;
     background: linear-gradient(45deg, rebeccapurple, rgb(133, 120, 218));
     padding: 1em;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 /* flex box CSS */
@@ -64,8 +69,8 @@ main {
 
 .box-container {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: flex-end;
     border: solid black 1px;
     border-radius: 15px;
     padding: 10px;
@@ -74,14 +79,15 @@ main {
 }
 
 .box {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     background: linear-gradient(
-            250deg,
+            120deg,
             transparent,
-            rgba(198, 137, 23, 0.931) 60%,
-            rgb(27, 78, 27) 90%
+            rgba(198, 137, 23, 0.931) 50%,
+            rgb(27, 78, 27) 95%
         ),
+        linear-gradient(0deg, rgba(27, 78, 27, 0.931) 10%, rgb(24, 96, 137) 50%),
         url('../assets/fallLeaves.png');
     border: 5px solid rgba(198, 137, 23, 0.931) 60%;
     border-radius: 20px;
@@ -89,7 +95,7 @@ main {
     align-items: center;
     display: flex;
     color: white;
-    box-shadow: 12px 13px 55px -4px rgba(153, 90, 26, 0.59);
+    box-shadow: 70px 20px 55px -4px rgba(153, 90, 26, 0.59);
 }
 
 /* grid box CSS */
@@ -101,9 +107,9 @@ main {
 .grid-columns {
     border: solid black 2px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    padding: 0px 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 4fr, 1fr, 1fr, 1fr, 1fr, 1fr);
+    padding: 0px 0px;
     gap: 10px;
 }
 
@@ -112,6 +118,7 @@ p {
     /* border: solid black 2px; */
     display: flex;
     justify-content: center;
+    align-content: center;
 }
 
 /* Playground */
